@@ -18,16 +18,14 @@ public class Main {
             System.out.println("Enter deposit amount :");
             if (scanner.hasNextDouble()) {
                 double depositAmount = scanner.nextDouble();
-                Runnable task = () ->
-                        bankAccount.deposit(depositAmount);
+                Runnable task = () -> bankAccount.deposit(depositAmount);
                 exs.execute(task);
             } else throw new Exception("invalid deposit amount");
             //System.out.println(depositAmount);
             System.out.println("Enter withdrawal amount :");
             if (scanner.hasNextDouble()) {
                 double withDrawAmount = scanner.nextDouble();
-                Runnable task2 = () ->
-                    bankAccount.withdraw(withDrawAmount);
+                Runnable task2 = () -> bankAccount.withdraw(withDrawAmount);
                 exs.execute(task2);
             } else  throw new Exception("invalid withdrawal amount");
         }catch(Exception e){
