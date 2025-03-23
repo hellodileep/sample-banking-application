@@ -29,4 +29,8 @@ public class BankAccount {
         else
             log.info("Invalid amount");
     }
+
+    public synchronized void getBalance(){
+        log.info("Your account balance is {}",this.balance);
+    }
 }
